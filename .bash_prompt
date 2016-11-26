@@ -158,7 +158,7 @@ sexy_bash_prompt_is_branch1_behind_branch2 () {
 
 sexy_bash_prompt_branch_exists () {
   # List remote branches           | # Find our branch and exit with 0 or 1 if found/not found
-  git branch --remote 2> /dev/null | grep --quiet "$1"
+  git branch --remote 2> /dev/null | grep -q "$1"
 }
 
 sexy_bash_prompt_parse_git_ahead () {
